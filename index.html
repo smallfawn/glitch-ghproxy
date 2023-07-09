@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub 文件加速 - raw </title>
+  <link rel="stylesheet" href="https://unpkg.com/element-plus@2.3.7/theme-chalk/index.css">
+  <style>
+    body {
+      background-color: #fff;
+    }
+    .container {
+      margin: 100px auto;
+      max-width: 400px;
+      text-align: center;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .input-box {
+      margin-bottom: 20px;
+    }
+    .input-box input {
+      width: 100%;
+      height: 40px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .btn {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 12px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <div class="title">GitHub 文件加速</div>
+      <div class="input-box">
+        <input type="text" placeholder="请输入你的raw链接" v-model="inputValue">
+      </div>
+      <el-button class="btn" type="primary" @click="openNewTab">确认</el-button>
+    </div>
+    <div class="footer">
+      项目基于nodejs for glitch.com，开源 <a href="https://github.com/smallfawn/glitch-ghproxy">https://github.com/smallfawn/glitch-ghproxy</a>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://unpkg.com/element-plus"></script>
+  <script>
+    const { createApp } = Vue;
+    const app = createApp({
+      data() {
+        return {
+          inputValue: ''
+        };
+      },
+      methods: {
+        openNewTab() {
+          const url = `/raw/${this.inputValue}`;
+          window.open(url);
+        }
+      }
+    });
+    app.use(ElementPlus);
+    app.mount('#app');
+  </script>
+</body>
+</html>

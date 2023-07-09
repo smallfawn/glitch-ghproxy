@@ -1,6 +1,12 @@
 const express = require('express');
-const axios = require('axios');
 const app = express();
+const path = require('path');
+const axios = require('axios');
+
+app.get('/', (req, res) => {
+  const filePath = path.join(__dirname, 'index.html');
+  res.sendFile(filePath);
+});
 app.get('/raw/*', async (req, res) => {
     const rawUrl = req.params[0];
     console.log(rawUrl);
@@ -14,8 +20,7 @@ app.get('/raw/*', async (req, res) => {
     }
     //res.send('URL参数获取成功');
   });
-  
-  
-  app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-  });
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
