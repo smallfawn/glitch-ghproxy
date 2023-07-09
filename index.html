@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GitHub 文件加速 - raw </title>
+  <title>GitHub 文件加速</title>
   <link rel="stylesheet" href="https://unpkg.com/element-plus@2.3.7/theme-chalk/index.css">
   <style>
     body {
@@ -44,11 +44,11 @@
     <div class="container">
       <div class="title">GitHub 文件加速</div>
       <div class="input-box">
-        <input type="text" placeholder="请输入你的raw链接" v-model="inputValue">
+        <input type="text" placeholder="请输入github链接" v-model="inputValue">
       </div>
       <el-button class="btn" type="primary" @click="openNewTab">确认</el-button>
     </div>
-    <div class="footer">
+    <div class="footer container">
       项目基于nodejs for glitch.com，开源 <a href="https://github.com/smallfawn/glitch-ghproxy">https://github.com/smallfawn/glitch-ghproxy</a>
     </div>
   </div>
