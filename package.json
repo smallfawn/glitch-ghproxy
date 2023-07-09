@@ -1,0 +1,23 @@
+{
+    "name": "glitch-ghproxy",
+    "version": "0.1.0",
+    "description": "基于glitch提供的nodejs托管创建的github反代或加速服务",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "chance": "^1.1.7",
+      "axios": "^0.21.1"
+    },
+    "engines": {
+      "node": "14.x"
+    },
+    "license": "MIT",
+    "keywords": [
+      "node",
+      "glitch"
+    ]
+  }
+  
