@@ -9,9 +9,9 @@
 const express = require('express');
 const app = express();
 const proxyMiddleware = require('./proxyMiddleware');
-
+const refresh = require('./refresh');
 app.use(proxyMiddleware);
-
+refresh()
 // 其他路由和中间件
 
 app.listen(3000, () => {
