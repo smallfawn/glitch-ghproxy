@@ -11,4 +11,6 @@
     "refreshTime":300000//刷新时间 建议默认
 }
 ``````
-使用http-proxy-middleware创建代理  当我访问http://localhost:3000/smallfawn时代理到https://github.com/smallfawn  当我访问http://localhost:3000/one时 代理到https://github.com/one
+创建github镜像站看githubproxy目录
+
+https://github.com/smallfawn/glitch-ghproxy/tree/main/githubproxy
