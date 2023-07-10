@@ -14,16 +14,17 @@ app.get('/:path', function _callee(req, res, next) {
         case 0:
           dynamicPath = req.params.path;
           console.log(dynamicPath);
+          /*if (dynamicPath.includes('smallfawn')) {
+              
+          }*/
 
-          if (dynamicPath.includes('smallfawn')) {}
-
-          _context.next = 5;
+          _context.next = 4;
           return regeneratorRuntime.awrap(addProxyMiddleware(app, dynamicPath));
 
-        case 5:
+        case 4:
           next();
 
-        case 6:
+        case 5:
         case "end":
           return _context.stop();
       }
