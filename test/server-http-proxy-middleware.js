@@ -8,7 +8,7 @@ app.get('/:path', async (req, res, next) => {
     /*if (dynamicPath.includes('smallfawn')) {
         
     }*/
-    await addProxyMiddleware(app, dynamicPath);
+     addProxyMiddleware(app, dynamicPath);
     next();
 });
 

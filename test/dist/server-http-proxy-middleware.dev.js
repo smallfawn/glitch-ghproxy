@@ -18,13 +18,10 @@ app.get('/:path', function _callee(req, res, next) {
               
           }*/
 
-          _context.next = 4;
-          return regeneratorRuntime.awrap(addProxyMiddleware(app, dynamicPath));
-
-        case 4:
+          addProxyMiddleware(app, dynamicPath);
           next();
 
-        case 5:
+        case 4:
         case "end":
           return _context.stop();
       }

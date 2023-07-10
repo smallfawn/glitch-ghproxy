@@ -1,16 +1,16 @@
-const express = require('express');
-const app = express();
-const addProxyMiddleware = require('./proxy');
 
-app.get('/:path',  (req, res, next) => {
-    const dynamicPath = req.params.path;
-    console.log(dynamicPath);
-    /*if (dynamicPath.includes('smallfawn')) {
-        
-    }*/
-     addProxyMiddleware(app, dynamicPath);
-    next();
-});
+const express = require('express');
+const app = express()
+
+const { createProxyMiddleware } = require('http-proxy-middleware');
+let dynamicPath = 'smallfawn'
+app.use(`/${dynamicPath}`, createProxyMiddleware({
+    target: 'https://github.com',
+    changeOrigin: true,
+    pathRewrite: {
+        [`^/${dynamicPath}`]: `/${dynamicPath}`
+    }
+}));
 
 
 app.listen(3000, () => {
