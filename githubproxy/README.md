@@ -1,3 +1,5 @@
+# 搭建github镜像站 所有https://github.com开头的网址均可替换为本项目地址
+
 在glitch项目中新建文件 index.js
 
 复制index.js内容粘贴
