@@ -1,14 +1,8 @@
 # 搭建github镜像站 所有https://github.com开头的网址均可替换为本项目地址
 
-在glitch项目中新建文件 index.js
+把本目录的文件全部上传到glitch.com中的nodejs项目
 
-复制index.js内容粘贴
-
-新建文件 index.js
-
-复制proxyMiddleware.js粘贴
-
-这样你就可以按照你的               https://test.glitch.me/samllfawn/glitch-ghproxy
+https://test.glitch.me/samllfawn/glitch-ghproxy
 
 https://test.glitch.me是你分配的域名
 
